@@ -1,0 +1,30 @@
+#splash{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity ls;
+}
+
+#splash img{
+    width: 300px;
+}
+
+#splash.fade{
+    opacity: 0;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
