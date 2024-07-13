@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+1LvOrc8kBo=",
+  "dgSpecHash": "PlmGVX5Wei8=",
   "success": true,
-  "projectFilePath": "D:\\linkvend\\inventory-manager-api-development\\inventory-manager-api.csproj",
+  "projectFilePath": "D:\\linkvend\\api\\inventory-manager-api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User Pc\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\User Pc\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
@@ -90,12 +90,5 @@
     "C:\\Users\\User Pc\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\User Pc\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
-    }
-  ]
+  "logs": []
 }

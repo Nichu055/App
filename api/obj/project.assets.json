@@ -4634,11 +4634,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\linkvend\\inventory-manager-api-development\\inventory-manager-api.csproj",
+      "projectUniqueName": "D:\\linkvend\\api\\inventory-manager-api.csproj",
       "projectName": "inventory-manager-api",
-      "projectPath": "D:\\linkvend\\inventory-manager-api-development\\inventory-manager-api.csproj",
+      "projectPath": "D:\\linkvend\\api\\inventory-manager-api.csproj",
       "packagesPath": "C:\\Users\\User Pc\\.nuget\\packages\\",
-      "outputPath": "D:\\linkvend\\inventory-manager-api-development\\obj\\",
+      "outputPath": "D:\\linkvend\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User Pc\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -4719,13 +4719,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
-    }
-  ]
+  }
 }
