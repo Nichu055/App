@@ -28,3 +28,7 @@ modeSwitch.addEventListener("click" , () =>{
 const Dashboard = document.getElementsByClassName (home);
 const Notifications = document.getElementsByClassName (Notifications);
 const Likes = document.getElementsByClassName (Likes);
+
+
+
+//Let's fvcking go
