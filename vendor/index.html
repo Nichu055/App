@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>  
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">  
     <title>Dashboard </title> 
 </head>
 <body>
@@ -32,35 +33,35 @@
                     <input type="text" placeholder="Search...">
                 </li>
 
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-user-circle icon'></i>
+                        <span class="text nav-text">User</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-package icon'></i>
+                        <span class="text nav-text">Product</span>
+                    </a>
+                </li>
+
                 <ul class="menu-links">
                     <li class="nav-link">
                         <a href="#">
-                            <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">Dashboard</span>
+                            <i class='bx bx-envelope icon'></i>
+                            <span class="text nav-text">Contact</span>
                         </a>
                     </li>
-
  
                     <li class="nav-link">
                         <a href="#">
-                            <i class='bx bx-bell icon'></i>
-                            <span class="text nav-text">Notifications</span>
+                            <i class='bx bxs-truck icon'></i>
+                            <span class="text nav-text">Orders</span>
                         </a>
                     </li>
 
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-pie-chart-alt icon' ></i>
-                            <span class="text nav-text">Analytics</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-heart icon' ></i>
-                            <span class="text nav-text">Likes</span>
-                        </a>
-                    </li>
 
                 </ul>
             </div>
@@ -91,10 +92,65 @@
     </nav>
 
     <section class="home">
-        <div class="text">Dashboard Sidebar</div>
+        <div class="text">Profile Details
+            <hr>
+        </div>
+
+        <div class="container">
+            <form action="#">
+                    <div class="details personal">
+                        <span class="title">Update Profile</span>
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="text" placeholder="Enter your email" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Mobile Number</label>
+                                <input type="number" placeholder="Enter mobile number" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Address Type</label>
+                                <input type="text" placeholder="Permanent or Temporary" required>
+                            </div>  
+                            
+                            <div class="input-field">
+                                <label>ID Type</label>
+                                <select required>
+                                    <option disabled selected>Select ID type</option>
+                                    <option>National ID</option>
+                                    <option>Driver's license</option>
+                                    <option>Tax ID</option>
+                                </select>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>ID Number</label>
+                                <input type="number" placeholder="Enter ID number" required>
+                            </div>
+    
+                            <button class="sumbit">
+                                <span class="btnText">Update</span>
+                                <i class="uil uil-navigator"></i>
+                            </button>
+
+                        </div>         
+                    </div>  
+            </form>
+        </div>
     </section>
 
-    <section class="Notifications">
+
+
+    <!-- <section class="Notifications">
         <div class="text">Notifications Sidebar</div>
     </section>
 
@@ -104,9 +160,10 @@
     
     <section class="Likes">
         <div class="text">Likes Sidebar</div>
-    </section>
+    </section> -->
 
 
     <script src="script.js"></script>
+    
 </body>
 </html>

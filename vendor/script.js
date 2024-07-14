@@ -3,9 +3,7 @@ const body = document.querySelector('body'),
       toggle = body.querySelector(".toggle"),
       searchBtn = body.querySelector(".search-box"),
       modeSwitch = body.querySelector(".toggle-switch"),
-      modeText = body.querySelector(".mode-text"),
-      home = body.querySelector(".Likes"),
-      Notifications = body.querySelector(".Notifications");
+      modeText = body.querySelector(".mode-text");
 
 
 toggle.addEventListener("click" , () =>{
@@ -27,3 +25,6 @@ modeSwitch.addEventListener("click" , () =>{
     }
 });
 
+const Dashboard = document.getElementsByClassName (home);
+const Notifications = document.getElementsByClassName (Notifications);
+const Likes = document.getElementsByClassName (Likes);

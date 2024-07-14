@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="text.css">
+</head>
+<body>
+  <div class="text">Product
+    <hr>
+  </div>
+            <br>
+  <div class="container">
+    <span class="title">Product</span>
+    
+  </div>
+   
+</div>
+</body>
+</html>
+
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    position: relative;
+
+    max-width: 75em;
+    width: 100%;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 0 0 0 3.6em;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* new product */
+
+
+That's my html and css code help me create a button inside the div called container the code will be under the span tag in the container class 
+
+then the css will be under the comment /* new product */
+ make this button fix in the container and it will be at the top right side of the container class
