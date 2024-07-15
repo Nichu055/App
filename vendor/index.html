@@ -141,15 +141,12 @@
 
 
     <section id="product" class="home nav-section">
-        <div class="text">Product Details
-            <hr>
-        </div>
+        <div class="text">Product Details<hr></div>
 
           <div class="container">
-            <span class="title">Product</span>
-             
+            <span class="title">Product</span>             
             <!-- New Product Button -->
-            <button class="new-product-button">New Product</button>
+            <button id="newProductBtn" class="new-product-button">New Product</button>
             <!-- table -->
             <table>
                 <thead>
@@ -160,9 +157,10 @@
                         <th>Quantity</th>
                         <th>Date added</th>
                         <th>Remark</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="productTable">
                     <tr>
                         <td>1</td>
                         <td>Nike Dunk Low Retro</td>
@@ -170,6 +168,7 @@
                         <td>12</td>
                         <td>2023-07-10</td>
                         <td>Limited edition</td>
+                        <td><button class="deleteBtn">Delete</button></td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -178,6 +177,7 @@
                         <td>11</td>
                         <td>2023-07-11</td>
                         <td>New arrival</td>
+                        <td><button class="deleteBtn">Delete</button></td>
                     </tr>
                     <tr>
                         <td>3</td>
@@ -186,6 +186,7 @@
                         <td>9</td>
                         <td>2023-07-12</td>
                         <td>Customer favorite</td>
+                        <td><button class="deleteBtn">Delete</button></td>
                     </tr>
                     <tr>
                         <td>4</td>
@@ -194,6 +195,7 @@
                         <td>10</td>
                         <td>2023-07-13</td>
                         <td>20% off next week</td>
+                        <td><button class="deleteBtn">Delete</button></td>
                     </tr>
                     <tr>
                         <td>5</td>
@@ -202,6 +204,7 @@
                         <td>8</td>
                         <td>2023-07-14</td>
                         <td>Best seller</td>
+                        <td><button class="deleteBtn">Delete</button></td>
                     </tr>
                     <tr>
                         <td>6</td>
@@ -210,6 +213,7 @@
                         <td>15</td>
                         <td>2023-07-15</td>
                         <td>New collection</td>
+                        <td><button class="deleteBtn">Delete</button></td>
                     </tr>
                     <tr>
                         <td>7</td>
@@ -218,6 +222,7 @@
                         <td>20</td>
                         <td>2023-07-16</td>
                         <td>Gym favorite</td>
+                        <td><button class="deleteBtn">Delete</button></td>
                     </tr>
                     <tr>
                         <td>8</td>
@@ -226,6 +231,7 @@
                         <td>7</td>
                         <td>2023-07-17</td>
                         <td>Highly rated</td>
+                        <td><button class="deleteBtn">Delete</button></td>
                     </tr>
                     <tr>
                         <td>9</td>
@@ -234,6 +240,7 @@
                         <td>9</td>
                         <td>2023-07-18</td>
                         <td>Top rated</td>
+                        <td><button class="deleteBtn">Delete</button></td>
                     </tr>
                     <tr>
                         <td>10</td>
@@ -242,11 +249,31 @@
                         <td>13</td>
                         <td>2023-07-19</td>
                         <td>Popular choice</td>
+                        <td><button class="deleteBtn">Delete</button></td>
                     </tr>
                 </tbody>
             </table>
-          </div>
-           
+        </div>
+    
+        <!-- The Modal -->
+        <div id="productModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add New Product</h2>
+                <form id="productForm">
+                    <label for="productName">Product name:</label>
+                    <input type="text" id="productName" name="productName" required>
+                    <label for="productPrice">Price:</label>
+                    <input type="number" id="productPrice" name="productPrice" required>
+                    <label for="productQuantity">Quantity:</label>
+                    <input type="number" id="productQuantity" name="productQuantity" required>
+                    <label for="productDate">Date added:</label>
+                    <input type="date" id="productDate" name="productDate" required>
+                    <label for="productRemark">Remark:</label>
+                    <input type="text" id="productRemark" name="productRemark" required>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -261,7 +288,6 @@
     </section> -->
 
 
-    <script src="script.js"></script>
-    
+    <script src="script.js"></script> 
 </body>
 </html>
