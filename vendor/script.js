@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var productPrice = document.getElementById('productPrice').value;
       var productQuantity = document.getElementById('productQuantity').value;
       var productDate = document.getElementById('productDate').value;
+      var productImage = document.getElementById('productImage').value;
       var productRemark = document.getElementById('productRemark').value;
 
       var row = table.insertRow();
@@ -89,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
       row.insertCell(2).innerHTML = `$${productPrice}`;
       row.insertCell(3).innerHTML = productQuantity;
       row.insertCell(4).innerHTML = productDate;
+      row.insertCell(4).innerHTML = productImage;
       row.insertCell(5).innerHTML = productRemark;
       var deleteCell = row.insertCell(6);
       deleteCell.innerHTML = '<button class="deleteBtn">Delete</button>';
