@@ -312,7 +312,7 @@ body.dark .home .text{
 
 .container{
     position: relative;
-    max-width: 900px;
+    max-width: 75em;
     width: 100%;
     border-radius: 6px;
     padding: 20px;
@@ -426,4 +426,69 @@ form .buttons button , .backBtn{
     form .fields .input-field{
         width: 100%;
     }
+}
+
+.title{
+    font-size: 2em;
+  }
+  
+  /* new product */
+  
+.new-product-button {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    padding: 10px 20px;
+    background-color:#009879;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.new-product-button:hover {
+    background-color:#16caa6;
+    
+}
+  #product{
+    display: none;
+}
+
+/* table */
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+table thead tr {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+table th {
+    background-color: #009879;
+    color: white;
 }

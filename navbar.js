@@ -3,7 +3,7 @@ src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"
 src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
 
 
-  $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+$('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
       var $el = $(this);
       var $parent = $(this).offsetParent(".dropdown-menu");
       if (!$(this).next().hasClass('show')) {
@@ -22,4 +22,4 @@ src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
           $el.next().css({"top": $el[0].offsetTop, "left": $parent.outerWidth() - 4});
       }
       return false;
-  });
+});

@@ -16,22 +16,3 @@
     margin: 0 0 0 3.6em;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
-
-/* new product */
-
-.new-product-button {
-  position: absolute;
-  top: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.new-product-button:hover {
-  background-color: #0056b3;
-}
