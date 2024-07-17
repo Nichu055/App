@@ -310,10 +310,10 @@ body.dark .home .text{
 
 /* profile */
 
-.container{
+.container{ 
     position: relative;
     max-width: 75em;
-    width: 100%;
+    width: inherit;
     border-radius: 6px;
     padding: 20px;
     margin: 0 0 0 3.6em;
@@ -451,12 +451,11 @@ form .buttons button , .backBtn{
     background-color:#16caa6;
     
 }
-  #product{
+#product{
     display: none;
 }
 
 /* table */
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -481,6 +480,12 @@ table tbody tr {
 
 table tbody tr:nth-of-type(even) {
     background-color: #f9f9f9;
+}
+
+table img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
 }
 
 .btn {
@@ -557,4 +562,54 @@ label, input {
 
 button[type="submit"] {
     margin-top: 10px;
+}
+
+#contact{
+    display: none;
+}
+
+
+.contact-form {
+    display: inline-flex;
+    max-width: inherit;
+    width: 100%;
+    padding: 30px;
+}
+
+.contact-form h1 {
+    display: flex;
+    text-align: center;
+    color: #333;
+    margin-bottom: 200px;
+    font-size: 24px;
+}
+
+.contact-form h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 18px;
+}
+
+.contact-form p {
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.contact-form p strong {
+    color: #333;
+}
+
+.contact-form a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.contact-form a:hover {
+    text-decoration: underline;
+}
+
+.inquiry-details{
+    margin-left: 9em;
 }

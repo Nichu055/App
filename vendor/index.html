@@ -274,22 +274,21 @@
                 <form id="productForm">
                     <label for="productName">Product name:</label>
                     <input type="text" id="productName" name="productName" required>
-
                     <label for="productPrice">Price:</label>
-                    <input type="number" id="productPrice" name="productPrice" required>
-
-                    <label for="productQuantity">Quantity:</label>
-                    <input type="number" id="productQuantity" name="productQuantity" required>
-
-                    <label for="productDate">Date added:</label>
-                    <input type="date" id="productDate" name="productDate" required>
-
-                    <label for="productImage">Image:</label>
-                    <input type="url" id="productImage" name="productImage" placeholder="Url to your image" required>
-
-                    <label for="productRemark">Remark:</label>
-                    <input type="text" id="productRemark" name="productRemark" required>
                     
+                    <input type="number" id="productPrice" name="productPrice" required>
+                    <label for="productQuantity">Quantity:</label>
+
+                    <input type="number" id="productQuantity" name="productQuantity" required>
+                    <label for="productDate">Date added:</label>
+
+                    <input type="date" id="productDate" name="productDate" required>
+                    <label for="productImage">Image URL:</label>
+
+                    <input type="url" id="productImage" name="productImage" required>
+                    <label for="productRemark">Remark:</label>
+
+                    <input type="text" id="productRemark" name="productRemark" required>
                     <button type="submit" class="btn">Submit</button>
                 </form>
             </div>
@@ -297,11 +296,35 @@
     </section>
 
 
-    <!--
-    <section id="contact" class="Likes nav-section">
-        <div class="text">Likes Sidebar</div>
+    <section id="contact" class="home nav-section">
+        <div class="text">Contact Details
+            <hr>
+        </div>
+
+        <div class="container">
+                <div class="contact-form">
+                    <section class="company-info">
+                        <h2>Company Information</h2>
+                        <p><strong>Company Name:</strong> Your Company Name</p>
+                        <p><strong>Contact Person:</strong> Your Name</p>
+                        <p><strong>Position/Title:</strong> Your Position</p>
+                        <p><strong>Email Address:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                        <p><strong>Phone Number:</strong> <a href="tel:+1234567890">+1234567890</a></p>
+                        <p><strong>Mailing Address:</strong> Your Company Address</p>
+                        <p><strong>Website:</strong> <a href="http://www.yourcompanywebsite.com" target="_blank">www.yourcompanywebsite.com</a></p>
+                    </section>
+                    <section class="inquiry-details">
+                        <h2>Inquiry Details</h2>
+                        <p><strong>Product Specifications:</strong> Detailed specifications of the product/service</p>
+                        <p><strong>Quantity:</strong> Required quantity</p>
+                        <p><strong>Delivery Schedule:</strong> Expected delivery timeline</p>
+                        <p><strong>Quality Standards:</strong> Any specific quality standards or certifications required</p>
+                        <p><strong>Payment Terms:</strong> Preferred payment terms</p>
+                    </section>
+                </div>
+        </div>
     </section>
-    
+    <!--
     <section id="orders" class="Likes nav-section">
         <div class="text">Likes Sidebar</div>
     </section> -->

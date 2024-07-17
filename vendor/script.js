@@ -84,15 +84,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var row = table.insertRow();
       var snCell = row.insertCell(0);
-      snCell.innerHTML = table.rows.length - 1;
+      snCell.innerHTML = table.rows.length;
 
       row.insertCell(1).innerHTML = productName;
       row.insertCell(2).innerHTML = `$${productPrice}`;
       row.insertCell(3).innerHTML = productQuantity;
       row.insertCell(4).innerHTML = productDate;
-      row.insertCell(4).innerHTML = productImage;
-      row.insertCell(5).innerHTML = productRemark;
-      var deleteCell = row.insertCell(6);
+
+      var imgCell = row.insertCell(5);
+      var img = document.createElement('img');
+      img.src = productImage;
+      img.alt = 'Product Image';
+      imgCell.appendChild(img);
+
+      row.insertCell(6).innerHTML = productRemark;
+      var deleteCell = row.insertCell(7);
       deleteCell.innerHTML = '<button class="deleteBtn">Delete</button>';
 
       // Clear form
@@ -115,4 +121,3 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   });
 });
-
