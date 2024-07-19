@@ -602,6 +602,43 @@ h2 {
     background-color: #f9f9f9;
 }
 
+.vendor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-btn {
+    background-color: #009879;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 18px;
+    margin: 10px 0;
+    flex-grow: 1;
+    display: inline-block;
+}
+
+.dropdown-btn:after {
+    content: '\002B';
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.dropdown-container {
+    display: none;
+    padding: 0 18px;
+    background-color: #f9f9f9;
+}
+
+.hidden {
+    display: none;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -641,9 +678,8 @@ table img {
     border: none;
     cursor: pointer;
     text-align: center;
-    display: flex;
+    display: inline-block;
     font-size: 16px;
-    float: right;
 }
 
 .btn:hover {
@@ -654,14 +690,16 @@ table img {
     margin-top: 10px;
 }
 
-.deleteBtn {
+.deleteVendorBtn {
     background-color: #e74c3c;
     color: white;
-    padding: 5px 10px;
+    padding: auto 20px;
     border: none;
     cursor: pointer;
+    font-size: 18px;
+    display: inline-block;
 }
 
-.deleteBtn:hover {
+.deleteVendorBtn:hover {
     background-color: #c0392b;
 }

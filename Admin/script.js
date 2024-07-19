@@ -107,3 +107,72 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+document.addEventListener('DOMContentLoaded', function () {
+  var dropdownButtons = document.querySelectorAll('.dropdown-btn');
+  var exportPdfButtons = document.querySelectorAll('.exportPdfBtn');
+  var deleteVendorButtons = document.querySelectorAll('.deleteVendorBtn');
+
+  dropdownButtons.forEach(button => {
+      button.addEventListener('click', function () {
+          this.classList.toggle('active');
+          var dropdownContainer = this.parentElement.nextElementSibling;
+          var deleteBtn = this.nextElementSibling;
+          if (dropdownContainer.style.display === 'block') {
+              dropdownContainer.style.display = 'none';
+              deleteBtn.classList.add('hidden');
+              this.textContent = this.textContent.replace('−', '+');
+          } else {
+              dropdownContainer.style.display = 'block';
+              deleteBtn.classList.remove('hidden');
+              this.textContent = this.textContent.replace('+', '−');
+          }
+      });
+  });
+
+  exportPdfButtons.forEach(button => {
+      button.addEventListener('click', function () {
+          var vendorId = this.getAttribute('data-vendor');
+          var table = document.getElementById(vendorId);
+
+          var { jsPDF } = window.jspdf;
+          var doc = new jsPDF();
+
+          var rows = table.querySelectorAll('tr');
+
+          var content = [];
+          rows.forEach((row, index) => {
+              var cells = row.querySelectorAll('th, td');
+              var rowData = [];
+              cells.forEach(cell => {
+                  if (cell.nodeName === "TH" || cell.nodeName === "TD" && !cell.querySelector('img')) {
+                      rowData.push(cell.innerText);
+                  } else if (cell.nodeName === "TD" && cell.querySelector('img')) {
+                      rowData.push('Image');
+                  } else {
+                      rowData.push(cell.innerText);
+                  }
+              });
+              content.push(rowData);
+          });
+
+          doc.autoTable({
+              head: [content[0]],
+              body: content.slice(1)
+          });
+
+          doc.save(vendorId + '-products.pdf');
+      });
+  });
+
+  deleteVendorButtons.forEach(button => {
+      button.addEventListener('click', function () {
+          var vendorId = this.getAttribute('data-vendor');
+          var vendorSection = document.getElementById(vendorId);
+          if (confirm('Are you sure you want to delete this vendor?')) {
+              vendorSection.remove();
+          }
+      });
+  });
+});
+

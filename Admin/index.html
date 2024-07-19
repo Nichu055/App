@@ -43,7 +43,7 @@
                 <li class="nav-link">
                     <a href="#">
                         <i class='bx bx-list-ul icon'></i>
-                        <span class="text nav-text">Product</span>
+                        <span class="text nav-text">Vendor</span>
                     </a>
                 </li>
 
@@ -140,14 +140,17 @@
     </section>
  
 
-    <section id="product" class="home nav-section">
-        <div class="text">Vendors Details<hr></div>
+    <section id="vendor" class="home nav-section">
+        <div class="text">Vendor Details<hr></div>
 
         <div class="container">
-        <span class="title">Vendor Products</span>               
-    
-            <div class="vendor">
-                <button class="dropdown-btn">Vendor 1</button>
+            <span class="title">Vendor Products</span>               
+            
+            <div class="vendor" id="vendor1Section">
+                <div class="vendor-header">
+                    <button class="dropdown-btn">Vendor 1</button>
+                    <button class="btn deleteVendorBtn hidden" data-vendor="vendor1Section">Delete</button>
+                </div>
                 <div class="dropdown-container">
                     <button class="btn exportPdfBtn" data-vendor="vendor1">Export as PDF</button>
                     <table id="vendor1">
@@ -183,8 +186,11 @@
                 </div>
             </div>
     
-            <div class="vendor">
-                <button class="dropdown-btn">Vendor 2</button>
+            <div class="vendor" id="vendor2Section">
+                <div class="vendor-header">
+                    <button class="dropdown-btn">Vendor 2</button>
+                    <button class="btn deleteVendorBtn hidden" data-vendor="vendor2Section">Delete</button>
+                </div>
                 <div class="dropdown-container">
                     <button class="btn exportPdfBtn" data-vendor="vendor2">Export as PDF</button>
                     <table id="vendor2">
@@ -220,8 +226,11 @@
                 </div>
             </div>
     
-            <div class="vendor">
-                <button class="dropdown-btn">Vendor 3</button>
+            <div class="vendor" id="vendor3Section">
+                <div class="vendor-header">
+                    <button class="dropdown-btn">Vendor 3</button>
+                    <button class="btn deleteVendorBtn hidden" data-vendor="vendor3Section">Delete</button>
+                </div>
                 <div class="dropdown-container">
                     <button class="btn exportPdfBtn" data-vendor="vendor3">Export as PDF</button>
                     <table id="vendor3">
@@ -257,10 +266,12 @@
                 </div>
             </div>
         </div>
+ 
+        </div>
     
     </section>
 
- <!--
+    <!--
     <section id="contact" class="home nav-section">
         <div class="text">Contact Details
             <hr>
@@ -275,7 +286,9 @@
         <div class="text">Likes Sidebar</div>
     </section> -->
 
+    <!-- jsPDF and autoTable plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="script.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.14/jspdf.plugin.autotable.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
