@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">  
+    <title>Dashboard </title> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../image/icon.jpg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Linkvend</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-user-circle icon'></i>
+                        <span class="text nav-text">Profile</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-list-ul icon'></i>
+                        <span class="text nav-text">Product</span>
+                    </a>
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-envelope icon'></i>
+                            <span class="text nav-text">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section id="profile" class="home nav-section">
+        <div class="text">Profile Details
+            <hr>
+        </div>
+
+        <div class="container">
+            <form action="#">
+                    <div class="details personal">
+                        <span class="title">Update Profile</span>
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Enter your name" >
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="text" placeholder="Enter your email" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Mobile Number</label>
+                                <input type="number" placeholder="Enter mobile number" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Address Type</label>
+                                <input type="text" placeholder="Permanent or Temporary" required>
+                            </div>  
+                            
+                            <div class="input-field">
+                                <label>ID Type</label>
+                                <select required>
+                                    <option disabled selected>Select ID type</option>
+                                    <option>National ID</option>
+                                    <option>Driver's license</option>
+                                    <option>Tax ID</option>
+                                </select>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>ID Number</label>
+                                <input type="number" placeholder="Enter ID number" required>
+                            </div>
+    
+                            <button class="sumbit">
+                                <span class="btnText">Update</span>
+                                <i class="uil uil-navigator"></i>
+                            </button>
+
+                        </div>         
+                    </div>  
+            </form>
+        </div>
+    </section>
+ 
+
+    <section id="product" class="home nav-section">
+        <div class="text">Vendors Details<hr></div>
+
+        <div class="container">
+        <span class="title">Vendor Products</span>               
+    
+            <div class="vendor">
+                <button class="dropdown-btn">Vendor 1</button>
+                <div class="dropdown-container">
+                    <button class="btn exportPdfBtn" data-vendor="vendor1">Export as PDF</button>
+                    <table id="vendor1">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Date Added</th>
+                                <th>Image</th>
+                                <th>Remark</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nike Dunk Low Retro</td>
+                                <td>$115</td>
+                                <td>12</td>
+                                <td>2023-07-10</td>
+                                <td><img src="https://via.placeholder.com/50" alt="Product Image"></td>
+                                <td>Limited edition</td>
+                            </tr>
+                            <tr>
+                                <td>Sabrina 2 "Conductor"</td>
+                                <td>$190</td>
+                                <td>11</td>
+                                <td>2023-07-11</td>
+                                <td><img src="https://via.placeholder.com/50" alt="Product Image"></td>
+                                <td>New arrival</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    
+            <div class="vendor">
+                <button class="dropdown-btn">Vendor 2</button>
+                <div class="dropdown-container">
+                    <button class="btn exportPdfBtn" data-vendor="vendor2">Export as PDF</button>
+                    <table id="vendor2">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Date Added</th>
+                                <th>Image</th>
+                                <th>Remark</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Adidas Ultraboost 21</td>
+                                <td>$180</td>
+                                <td>8</td>
+                                <td>2023-07-14</td>
+                                <td><img src="https://via.placeholder.com/50" alt="Product Image"></td>
+                                <td>Best seller</td>
+                            </tr>
+                            <tr>
+                                <td>Puma RS-X³ Puzzle</td>
+                                <td>$110</td>
+                                <td>15</td>
+                                <td>2023-07-15</td>
+                                <td><img src="https://via.placeholder.com/50" alt="Product Image"></td>
+                                <td>New collection</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    
+            <div class="vendor">
+                <button class="dropdown-btn">Vendor 3</button>
+                <div class="dropdown-container">
+                    <button class="btn exportPdfBtn" data-vendor="vendor3">Export as PDF</button>
+                    <table id="vendor3">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Date Added</th>
+                                <th>Image</th>
+                                <th>Remark</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Reebok Nano X1</td>
+                                <td>$130</td>
+                                <td>20</td>
+                                <td>2023-07-16</td>
+                                <td><img src="https://via.placeholder.com/50" alt="Product Image"></td>
+                                <td>Gym favorite</td>
+                            </tr>
+                            <tr>
+                                <td>Asics Gel-Kayano 27</td>
+                                <td>$160</td>
+                                <td>7</td>
+                                <td>2023-07-17</td>
+                                <td><img src="https://via.placeholder.com/50" alt="Product Image"></td>
+                                <td>Highly rated</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+
+ <!--
+    <section id="contact" class="home nav-section">
+        <div class="text">Contact Details
+            <hr>
+        </div>
+
+        <div class="container">
+                
+        </div>
+    </section>
+   
+    <section id="orders" class="Likes nav-section">
+        <div class="text">Likes Sidebar</div>
+    </section> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script> 
+</body>
+</html>
