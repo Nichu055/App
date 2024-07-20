@@ -57,7 +57,7 @@
             <div class="form signup">
                 <span class="title">Registration</span>
 
-                <form action="../../api/Controllers.cs" method="get">
+                <form id="regForm">
                     <div class="input-field">
                         <input type="text" name="name" placeholder="Enter your name" required>
                         <i class="uil uil-user"></i>
@@ -71,7 +71,7 @@
                         <i class="uil uil-lock icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Confirm a password" required>
+                        <input type="password" class="password" name="confirmPass" placeholder="Confirm a password" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
@@ -84,7 +84,7 @@
                     </div>
 
                     <div class="input-field button">
-                        <input type="button" value="Signup">
+                        <input type="submit" value="Signup">
                     </div>
 
                     <button class="google">
