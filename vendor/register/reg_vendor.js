@@ -45,7 +45,6 @@ const container = document.querySelector(".container"),
                 name: regForm.name.value.trim(),
                 email: regForm.email.value.trim(),
                 password: regForm.password.value.trim(),
-                
             }
             let confirmPassword = regForm.confirmPass.value;
             if (userDetails.email == '' || userDetails.password == '' || userDetails.name == '') {
@@ -57,6 +56,9 @@ const container = document.querySelector(".container"),
             const res = await fetch('http://localhost:5158/Vendors', {
                 method: 'POST',
                 body : userDetails,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
             })
             console.log(res);
         } catch (error) {
