@@ -56,7 +56,7 @@ const container = document.querySelector(".container"),
             }
             const res = await fetch('http://localhost:5158/Vendors', {
                 method: 'POST',
-                body : userDetails
+                body : userDetails,
             })
             console.log(res);
         } catch (error) {
