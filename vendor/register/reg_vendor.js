@@ -4,7 +4,7 @@ const container = document.querySelector(".container"),
       signUp = document.querySelector(".signup-link"),
       login = document.querySelector(".login-link");
 
-    //   js code to show/hide password and change icon
+    //Show/hide password and change icon
     pwShowHide.forEach(eyeIcon =>{
         eyeIcon.addEventListener("click", ()=>{
             pwFields.forEach(pwField =>{
@@ -25,7 +25,7 @@ const container = document.querySelector(".container"),
         })
     })
 
-    // js code to appear signup and login form
+    //Appear signup and login form
     signUp.addEventListener("click", ( )=>{
         container.classList.add("active");
     });
@@ -65,3 +65,31 @@ const container = document.querySelector(".container"),
             console.log(error);
         }
     }
+
+    // login
+    
+    logForm.addEventListener('submit', handleLogin);
+
+    async function handleLogin(e) {
+        e.preventDefault();
+        try {
+            const userDetails = {
+                email: regForm.email.value.trim(),
+                password: regForm.password.value.trim(),
+            }
+            if (userDetails.email == '' || userDetails.password == '') {
+                throw new Error('Ensure all fields are filled')
+            }
+            const res = await fetch('http://localhost:5158/Vendors', {
+                method: 'POST',
+                body : userDetails,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            console.log(res);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    
