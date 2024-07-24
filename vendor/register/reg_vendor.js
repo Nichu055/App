@@ -53,7 +53,7 @@ const container = document.querySelector(".container"),
             if (confirmPassword != userDetails.password) {
                 throw new Error('Password does not match')
             }
-            const res = await fetch('http://localhost:5158/Vendors', {
+            const res = await fetch('http://localhost:5158/api/Vendors', {
                 method: 'POST',
                 body : userDetails,
                 headers: {
@@ -80,7 +80,7 @@ const container = document.querySelector(".container"),
             if (userDetails.email == '' || userDetails.password == '') {
                 throw new Error('Ensure all fields are filled')
             }
-            const res = await fetch('http://localhost:5158/Vendors', {
+            const res = await fetch('http://localhost:5158/api/Vendors', {
                 method: 'POST',
                 body : userDetails,
                 headers: {
