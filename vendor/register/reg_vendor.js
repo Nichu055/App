@@ -74,8 +74,8 @@ const container = document.querySelector(".container"),
         e.preventDefault();
         try {
             const userDetails = {
-                email: regForm.email.value.trim(),
-                password: regForm.password.value.trim(),
+                email: logForm.email.value.trim(),
+                password: logForm.password.value.trim(),
             }
             if (userDetails.email == '' || userDetails.password == '') {
                 throw new Error('Ensure all fields are filled')
