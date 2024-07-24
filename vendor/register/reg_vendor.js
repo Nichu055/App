@@ -61,7 +61,7 @@ const container = document.querySelector(".container"),
             });
 
             console.log(res);
-            window.location.href = "../../index.html";
+            window.location.href = "reg_vendor.html";
         } catch (error) {
             console.log(error);
         }
@@ -87,7 +87,7 @@ const container = document.querySelector(".container"),
                 }
             });
             console.log(res);
-            window.location.href = "../../index.html";
+            window.location.href = "../index.html";
         } catch (error) {
             console.log(error);
         }
