@@ -39,7 +39,6 @@ const container = document.querySelector(".container"),
 
     async function handleRegistration(e) {
         e.preventDefault();
-
         try {
             const userDetails = {
                 name: regForm.name.value.trim(),
@@ -47,21 +46,22 @@ const container = document.querySelector(".container"),
                 password: regForm.password.value.trim(),
             }
             let confirmPassword = regForm.confirmPass.value;
-            if (userDetails.email == '' || userDetails.password == '' || userDetails.name == '') {
-                throw new Error('Ensure all fields are filled')
+            if (userDetails.email === '' || userDetails.password === '' || userDetails.name === '') {
+                throw new Error('Ensure all fields are filled');
             }
-            if (confirmPassword != userDetails.password) {
-                throw new Error('Password does not match')
+            if (confirmPassword !== userDetails.password) {
+                throw new Error('Password does not match');
             }
-            const res = await fetch('http://localhost:5158/api/Vendors', {
-                method: 'POST',
-                body : userDetails,
+            
+            // Axios request
+            const res = await axios.post('http://localhost:5158/api/Vendors', userDetails, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
-            })
+            });
+
             console.log(res);
-              window.location.href = "../index.html";
+            window.location.href = "../../index.html";
         } catch (error) {
             console.log(error);
         }
@@ -78,20 +78,17 @@ const container = document.querySelector(".container"),
                 email: logForm.email.value.trim(),
                 password: logForm.password.value.trim(),
             }
-            if (userDetails.email == '' || userDetails.password == '') {
+            if (userDetails.email === '' || userDetails.password === '') {
                 throw new Error('Ensure all fields are filled')
             }
-            const res = await fetch('http://localhost:5158/api/Vendors', {
-                method: 'POST',
-                body : userDetails,
+            const res = await axios.post('http://localhost:5158/api/Vendors', userDetails, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
-            })
+            });
             console.log(res);
-              window.location.href = "../index.html";
+            window.location.href = "../../index.html";
         } catch (error) {
             console.log(error);
         }
     }
-    
