@@ -64,7 +64,7 @@ async function handleRegistration(e) {
         });
 
         console.log(res);
-        window.location.href = "reg_vendor.html";
+        window.location.href = "../index.html";
     } catch (error) {
         console.log(error);
     }
@@ -72,7 +72,7 @@ async function handleRegistration(e) {
 
     // login
     
-    const logForm = document.getElementById('logForm');
+const logForm = document.getElementById('logForm');
 
 logForm.addEventListener('submit', handleLogin);
 
@@ -84,20 +84,27 @@ async function handleLogin(e) {
             password: logForm.password.value.trim(),
         };
 
+        // Validate input
         if (userDetails.email === '' || userDetails.password === '') {
             throw new Error('Ensure all fields are filled');
         }
 
-        // Axios request
-        const res = await axios.post('http://localhost:5158/api/Vendors', userDetails, {
+        const res = await axios.post('http://localhost:5158/api/Vendors/login', userDetails, {
             headers: {
                 'Content-Type': 'application/json'
             }
         });
 
-        console.log(res);
-        window.location.href = "../index.html";
+        // Assuming the response status 200 indicates success and response.data contains user data
+        if (res.status === 200 && res.data.success) {
+            // Redirect to index.html if login is successful
+            window.location.href = "../index.html";
+        } else {
+            // Log an error if login fails
+            console.log('Login failed:', res.data.message || 'Unknown error');
+        }
     } catch (error) {
-        console.log(error);
+        // Log detailed error information
+        console.log('Error:', error.response ? error.response.data : error.message);
     }
 }
